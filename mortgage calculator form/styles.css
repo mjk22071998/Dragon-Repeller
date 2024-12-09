@@ -14,14 +14,6 @@ body {
     justify-content: center;
 }
 
-#msg {
-    display: block;
-}
-
-#calc {
-    display: none;
-}
-
 .main {
     max-width: 1000px;
     display: flex;
@@ -194,7 +186,7 @@ button {
 }
 
 .monthly {
-    font-size: 50pt;
+    font-size: 36pt;
     margin: 0;
     font-weight: bold;
     color: #D9DB30;

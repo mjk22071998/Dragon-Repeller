@@ -26,7 +26,7 @@
                     <span class="unit">
                         £
                     </span>
-                    <input class="input-field" type="number" id="amount" />
+                    <input class="input-field" min="1" onchange="update" value="1" type="number" id="amount" />
                 </div>
             </div>
             <div class="flex-input">
@@ -35,7 +35,7 @@
                         Mortgage Term
                     </label>
                     <div class="input-group">
-                        <input class="input-field" type="number" id="time" />
+                        <input class="input-field" min="1" onchange="update" value="1" type="number" id="time" />
                         <span class="unit">
                             years
                         </span>
@@ -46,7 +46,8 @@
                         Interest Rate
                     </label>
                     <div class="input-group">
-                        <input class="input-field" step="0.01" type="number" id="interest" />
+                        <input class="input-field" min="1" onchange="update" value="1" step="0.01" type="number"
+                            id="interest" />
                         <span class="unit">
                             %
                         </span>
@@ -74,16 +75,6 @@
                 Calculate Repayments
             </button>
         </div>
-        <div id="msg" class="right msg">
-            <img alt="Illustration of financial items like calculator, money, and documents" class="mb-4" height="150"
-                src="assets\images\illustration-empty.svg" width="150" />
-            <h2>
-                Results shown here
-            </h2>
-            <p>
-                Complete the form and click "calculate repayments" to see what your monthly repayments would be.
-            </p>
-        </div>
         <div id="calc" class="right">
             <div>
                 <h2>
@@ -98,13 +89,12 @@
             </div>
             <div class="calculations">
                 <p>Your monthly repayments</p>
-                <p class="monthly">£1,797.74</p>
+                <p class="monthly" id="monthly">£0.0</p>
                 <hr />
                 <p>Total you'll repay over the term</p>
-                <p class="yearly">£539,322.94</p>
+                <p class="yearly" id="yearly">£0.0</p>
             </div>
         </div>
-    </div>
     </div>
     <script src="script.js"></script>
 </body>
